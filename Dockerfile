@@ -4,7 +4,7 @@ RUN cd /etc/yum.repos.d && mkdir backup && mv *.repo backup
 COPY CentOS-aliyun-lhr.repo /etc/yum.repos.d/
 COPY epel-aliyun.repo /etc/yum.repos.d/
 RUN yum clean all && yum makecache fast
-RUN yum install -y openssh-server net-tools
+RUN yum install -y openssh-server net-tools lsof openssh-clients
 
 RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ""
 RUN ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -N ""
