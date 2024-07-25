@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 RUN apt update
-RUN apt install -y python2 wget curl
+RUN apt install -y python2 wget curl vim lsof
 RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
 RUN python2 get-pip.py
 RUN apt install -y libmysqlclient-dev gcc python-dev
